@@ -148,7 +148,7 @@ FromNode        ToNode          FromTime        ToTime          OWLT
 
 1) ComputedAtTime: 60
 Neighbor        FromTime        ToTime          ArrivalTime     OwltSum         Confidence      Children        Father          Hops            SP
-10              70              80              70              0               1.00            0               no              1               0.800000
+10              70              80              70              0               1.00            0               no              1               0.000000
 FromNode        ToNode          FromTime        ToTime          XmitRate        Confidence      MTV[Bulk]       MTV[Normal]     MTV[Expedited]
 11              10              70              80              1000            1.00            10000           10000           10000
 

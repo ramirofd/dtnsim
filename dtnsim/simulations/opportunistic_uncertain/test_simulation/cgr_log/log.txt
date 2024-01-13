@@ -81,10 +81,6 @@
 [             10]: Region number: 1.
 [             10]: Best routes found: 1.
 [             10]: Used route to neighbor 4.
-[             20]: Destination node: 5.
-[             20]: Region number: 1.
-[             20]: Best routes found: 1.
-[             20]: Used route to neighbor 5.
-[             40]: Destination node: 5.
-[             40]: Region number: 1.
-[             40]: Best routes found: 0.
+[             30]: Destination node: 5.
+[             30]: Region number: 1.
+[             30]: Best routes found: 0.

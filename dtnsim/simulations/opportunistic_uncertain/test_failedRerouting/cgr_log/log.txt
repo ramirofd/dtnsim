@@ -27,11 +27,3 @@
 [              0]: Region number: 1.
 [              0]: Best routes found: 1.
 [              0]: Used route to neighbor 2.
-[             25]: Destination node: 2.
-[             25]: Region number: 1.
-[             25]: Best routes found: 1.
-[             25]: Used route to neighbor 4.
-[             25]: Destination node: 2.
-[             25]: Region number: 1.
-[             25]: Best routes found: 1.
-[             25]: Used route to neighbor 2.

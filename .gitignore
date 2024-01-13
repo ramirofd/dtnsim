@@ -5,3 +5,15 @@
 # Ignore binaries
 dtnsim/out/
 dtnsim/dtnsim
+
+# Ignore results files in simulations folder
+dtnsim/simulations/**/results/
+
+dtnsim/simulations/opportunistic/**/.sca
+dtnsim/simulations/opportunistic/**/.vci
+dtnsim/simulations/opportunistic/**/.vec
+dtnsim/simulations/opportunistic/**/cgr_log/
+dtnsim/simulations/opportunistic_uncertain/**/cgr_log/
+
+dtnsim/simulations/tutorial/**/results/
+

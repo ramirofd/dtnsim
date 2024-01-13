@@ -161,3 +161,8 @@
 [            120]: Contact plan modified, all routes will be discarded.
 [            120]: Best routes found: 1.
 [            120]: Used route to neighbor 4.
+[            140]: Destination node: 1.
+[            140]: Region number: 1.
+[            140]: Contact plan modified, all routes will be discarded.
+[            140]: Best routes found: 1.
+[            140]: Used route to neighbor 1.

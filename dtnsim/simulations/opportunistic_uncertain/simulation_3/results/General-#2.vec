@@ -1,8 +1,8 @@
 version 3
-run General-2-20230408-19:32:52-46975
+run General-2-20240110-10:29:40-10435
 attr configname General
-attr datetime 20230408-19:32:52
-attr datetimef 20230408-193252
+attr datetime 20240110-10:29:40
+attr datetimef 20240110-102940
 attr experiment General
 attr inifile example1.ini
 attr iterationvars ""
@@ -10,12 +10,13 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network src.dtnsim
-attr processid 46975
+attr processid 10435
 attr repetition 2
 attr replication #2
 attr resultdir results
 attr runnumber 2
 attr seedset 2
+config allow-object-stealing-on-deletion true
 config network src.dtnsim
 config repeat 5
 config sim-time-limit 200s

@@ -1,8 +1,8 @@
 version 3
-run General-2-20230408-19:32:52-46975
+run General-2-20240110-10:29:40-10435
 attr configname General
-attr datetime 20230408-19:32:52
-attr datetimef 20230408-193252
+attr datetime 20240110-10:29:40
+attr datetimef 20240110-102940
 attr experiment General
 attr inifile example1.ini
 attr iterationvars ""
@@ -10,12 +10,13 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network src.dtnsim
-attr processid 46975
+attr processid 10435
 attr repetition 2
 attr replication #2
 attr resultdir results
 attr runnumber 2
 attr seedset 2
+config allow-object-stealing-on-deletion true
 config network src.dtnsim
 config repeat 5
 config sim-time-limit 200s
@@ -93,27 +94,27 @@ par dtnsim.node[0].app returnToSender true
 par dtnsim.node[0].app critical false
 par dtnsim.node[0].app custodyTransfer false
 par dtnsim.node[0].app externalTrafficEvents "\"\""
-scalar dtnsim.node[0].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[0].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[0].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[0].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[0].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[0].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[0].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -123,27 +124,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[0].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[0].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[0].app appBundleReceivedHops:max nan
+scalar dtnsim.node[0].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[0].app appBundleReceivedHops:min nan
+scalar dtnsim.node[0].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[0].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -184,7 +185,7 @@ par dtnsim.node[0].dtn gamma 0.999
 par dtnsim.node[0].dtn delta 0.01
 par dtnsim.node[0].dtn custodyReportByteSize 20
 par dtnsim.node[0].dtn custodyTimeout 100
-scalar dtnsim.node[0].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[0].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -194,7 +195,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[0].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[0].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -214,22 +215,22 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrDijkstraCalls
 attr title "routeCgrDijkstraCalls, sum"
-scalar dtnsim.node[0].dtn sdrBytesStored:timeavg nan
+scalar dtnsim.node[0].dtn sdrBytesStored:timeavg -nan
 attr interpolationmode none
 attr recordingmode timeavg
 attr source sdrBytesStored
 attr title "sdrBytesStored, timeavg"
-scalar dtnsim.node[0].dtn sdrBytesStored:max nan
+scalar dtnsim.node[0].dtn sdrBytesStored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source sdrBytesStored
 attr title "sdrBytesStored, max"
-scalar dtnsim.node[0].dtn sdrBundleStored:timeavg nan
+scalar dtnsim.node[0].dtn sdrBundleStored:timeavg -nan
 attr interpolationmode none
 attr recordingmode timeavg
 attr source sdrBundleStored
 attr title "sdrBundleStored, timeavg"
-scalar dtnsim.node[0].dtn sdrBundleStored:max nan
+scalar dtnsim.node[0].dtn sdrBundleStored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source sdrBundleStored
@@ -251,10 +252,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[0].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -266,10 +267,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[0].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -332,7 +333,7 @@ attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[1].app appBundleReceivedDelay:histogram
 field count 1
 field mean 80
-field stddev nan
+field stddev -nan
 field min 80
 field max 80
 field sum 80
@@ -363,7 +364,7 @@ attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[1].app appBundleReceivedHops:histogram
 field count 1
 field mean 3
-field stddev nan
+field stddev -nan
 field min 3
 field max 3
 field sum 3
@@ -407,7 +408,7 @@ par dtnsim.node[1].dtn gamma 0.999
 par dtnsim.node[1].dtn delta 0.01
 par dtnsim.node[1].dtn custodyReportByteSize 20
 par dtnsim.node[1].dtn custodyTimeout 100
-scalar dtnsim.node[1].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[1].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -417,7 +418,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[1].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[1].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -475,7 +476,7 @@ attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[1].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 1
 field mean 0
-field stddev nan
+field stddev -nan
 field min 0
 field max 0
 field sum 0
@@ -539,7 +540,7 @@ bin	0.5	0
 statistic dtnsim.node[1].dtn dtnBundleSentToAppHopCount:histogram
 field count 1
 field mean 3
-field stddev nan
+field stddev -nan
 field min 3
 field max 3
 field sum 3
@@ -587,27 +588,27 @@ par dtnsim.node[2].app returnToSender true
 par dtnsim.node[2].app critical false
 par dtnsim.node[2].app custodyTransfer false
 par dtnsim.node[2].app externalTrafficEvents "\"\""
-scalar dtnsim.node[2].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[2].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[2].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[2].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[2].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[2].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[2].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -617,27 +618,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[2].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[2].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[2].app appBundleReceivedHops:max nan
+scalar dtnsim.node[2].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[2].app appBundleReceivedHops:min nan
+scalar dtnsim.node[2].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[2].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -678,7 +679,7 @@ par dtnsim.node[2].dtn gamma 0.999
 par dtnsim.node[2].dtn delta 0.01
 par dtnsim.node[2].dtn custodyReportByteSize 20
 par dtnsim.node[2].dtn custodyTimeout 100
-scalar dtnsim.node[2].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[2].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -688,7 +689,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[2].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[2].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -745,10 +746,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[2].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -760,10 +761,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[2].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -983,7 +984,7 @@ par dtnsim.node[3].dtn gamma 0.999
 par dtnsim.node[3].dtn delta 0.01
 par dtnsim.node[3].dtn custodyReportByteSize 20
 par dtnsim.node[3].dtn custodyTimeout 100
-scalar dtnsim.node[3].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[3].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -993,7 +994,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[3].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[3].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -1182,7 +1183,7 @@ attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[4].app appBundleReceivedDelay:histogram
 field count 1
 field mean 120
-field stddev nan
+field stddev -nan
 field min 120
 field max 120
 field sum 120
@@ -1213,7 +1214,7 @@ attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[4].app appBundleReceivedHops:histogram
 field count 1
 field mean 3
-field stddev nan
+field stddev -nan
 field min 3
 field max 3
 field sum 3
@@ -1257,7 +1258,7 @@ par dtnsim.node[4].dtn gamma 0.999
 par dtnsim.node[4].dtn delta 0.01
 par dtnsim.node[4].dtn custodyReportByteSize 20
 par dtnsim.node[4].dtn custodyTimeout 100
-scalar dtnsim.node[4].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[4].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -1267,7 +1268,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[4].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[4].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -1325,7 +1326,7 @@ attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[4].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 1
 field mean 0
-field stddev nan
+field stddev -nan
 field min 0
 field max 0
 field sum 0
@@ -1389,7 +1390,7 @@ bin	0.5	0
 statistic dtnsim.node[4].dtn dtnBundleSentToAppHopCount:histogram
 field count 1
 field mean 3
-field stddev nan
+field stddev -nan
 field min 3
 field max 3
 field sum 3
@@ -1437,27 +1438,27 @@ par dtnsim.node[5].app returnToSender true
 par dtnsim.node[5].app critical false
 par dtnsim.node[5].app custodyTransfer false
 par dtnsim.node[5].app externalTrafficEvents "\"\""
-scalar dtnsim.node[5].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[5].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[5].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[5].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[5].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[5].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[5].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -1467,27 +1468,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[5].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[5].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[5].app appBundleReceivedHops:max nan
+scalar dtnsim.node[5].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[5].app appBundleReceivedHops:min nan
+scalar dtnsim.node[5].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[5].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -1528,7 +1529,7 @@ par dtnsim.node[5].dtn gamma 0.999
 par dtnsim.node[5].dtn delta 0.01
 par dtnsim.node[5].dtn custodyReportByteSize 20
 par dtnsim.node[5].dtn custodyTimeout 100
-scalar dtnsim.node[5].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[5].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -1538,7 +1539,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[5].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[5].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -1595,10 +1596,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[5].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -1610,10 +1611,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[5].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -1658,27 +1659,27 @@ par dtnsim.node[6].app returnToSender true
 par dtnsim.node[6].app critical false
 par dtnsim.node[6].app custodyTransfer false
 par dtnsim.node[6].app externalTrafficEvents "\"\""
-scalar dtnsim.node[6].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[6].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[6].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[6].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[6].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[6].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[6].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -1688,27 +1689,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[6].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[6].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[6].app appBundleReceivedHops:max nan
+scalar dtnsim.node[6].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[6].app appBundleReceivedHops:min nan
+scalar dtnsim.node[6].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[6].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -1749,7 +1750,7 @@ par dtnsim.node[6].dtn gamma 0.999
 par dtnsim.node[6].dtn delta 0.01
 par dtnsim.node[6].dtn custodyReportByteSize 20
 par dtnsim.node[6].dtn custodyTimeout 100
-scalar dtnsim.node[6].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[6].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -1759,7 +1760,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[6].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[6].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -1816,10 +1817,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[6].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -1831,10 +1832,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[6].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -1879,27 +1880,27 @@ par dtnsim.node[7].app returnToSender false
 par dtnsim.node[7].app critical false
 par dtnsim.node[7].app custodyTransfer false
 par dtnsim.node[7].app externalTrafficEvents "\"\""
-scalar dtnsim.node[7].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[7].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[7].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[7].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[7].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[7].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[7].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -1909,27 +1910,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[7].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[7].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[7].app appBundleReceivedHops:max nan
+scalar dtnsim.node[7].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[7].app appBundleReceivedHops:min nan
+scalar dtnsim.node[7].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[7].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -1970,7 +1971,7 @@ par dtnsim.node[7].dtn gamma 0.999
 par dtnsim.node[7].dtn delta 0.01
 par dtnsim.node[7].dtn custodyReportByteSize 20
 par dtnsim.node[7].dtn custodyTimeout 100
-scalar dtnsim.node[7].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[7].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -1980,7 +1981,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[7].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[7].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -2037,10 +2038,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[7].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2052,10 +2053,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[7].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2100,27 +2101,27 @@ par dtnsim.node[8].app returnToSender false
 par dtnsim.node[8].app critical false
 par dtnsim.node[8].app custodyTransfer false
 par dtnsim.node[8].app externalTrafficEvents "\"\""
-scalar dtnsim.node[8].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[8].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[8].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[8].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[8].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[8].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[8].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2130,27 +2131,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[8].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[8].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[8].app appBundleReceivedHops:max nan
+scalar dtnsim.node[8].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[8].app appBundleReceivedHops:min nan
+scalar dtnsim.node[8].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[8].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2191,7 +2192,7 @@ par dtnsim.node[8].dtn gamma 0.999
 par dtnsim.node[8].dtn delta 0.01
 par dtnsim.node[8].dtn custodyReportByteSize 20
 par dtnsim.node[8].dtn custodyTimeout 100
-scalar dtnsim.node[8].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[8].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -2201,7 +2202,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[8].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[8].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -2258,10 +2259,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[8].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2273,10 +2274,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[8].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2321,27 +2322,27 @@ par dtnsim.node[9].app returnToSender true
 par dtnsim.node[9].app critical false
 par dtnsim.node[9].app custodyTransfer false
 par dtnsim.node[9].app externalTrafficEvents "\"\""
-scalar dtnsim.node[9].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[9].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[9].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[9].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[9].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[9].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[9].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2351,27 +2352,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[9].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[9].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[9].app appBundleReceivedHops:max nan
+scalar dtnsim.node[9].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[9].app appBundleReceivedHops:min nan
+scalar dtnsim.node[9].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[9].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2412,7 +2413,7 @@ par dtnsim.node[9].dtn gamma 0.999
 par dtnsim.node[9].dtn delta 0.01
 par dtnsim.node[9].dtn custodyReportByteSize 20
 par dtnsim.node[9].dtn custodyTimeout 100
-scalar dtnsim.node[9].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[9].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -2422,7 +2423,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[9].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[9].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -2479,10 +2480,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[9].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2494,10 +2495,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[9].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2542,27 +2543,27 @@ par dtnsim.node[10].app returnToSender false
 par dtnsim.node[10].app critical false
 par dtnsim.node[10].app custodyTransfer false
 par dtnsim.node[10].app externalTrafficEvents "\"\""
-scalar dtnsim.node[10].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[10].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[10].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[10].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[10].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[10].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[10].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2572,27 +2573,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[10].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[10].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[10].app appBundleReceivedHops:max nan
+scalar dtnsim.node[10].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[10].app appBundleReceivedHops:min nan
+scalar dtnsim.node[10].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[10].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2633,7 +2634,7 @@ par dtnsim.node[10].dtn gamma 0.999
 par dtnsim.node[10].dtn delta 0.01
 par dtnsim.node[10].dtn custodyReportByteSize 20
 par dtnsim.node[10].dtn custodyTimeout 100
-scalar dtnsim.node[10].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[10].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -2643,7 +2644,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[10].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[10].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -2700,10 +2701,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[10].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2715,10 +2716,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[10].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2763,27 +2764,27 @@ par dtnsim.node[11].app returnToSender false
 par dtnsim.node[11].app critical false
 par dtnsim.node[11].app custodyTransfer false
 par dtnsim.node[11].app externalTrafficEvents "\"\""
-scalar dtnsim.node[11].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[11].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[11].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[11].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[11].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[11].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[11].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2793,27 +2794,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[11].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[11].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[11].app appBundleReceivedHops:max nan
+scalar dtnsim.node[11].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[11].app appBundleReceivedHops:min nan
+scalar dtnsim.node[11].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[11].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2854,7 +2855,7 @@ par dtnsim.node[11].dtn gamma 0.999
 par dtnsim.node[11].dtn delta 0.01
 par dtnsim.node[11].dtn custodyReportByteSize 20
 par dtnsim.node[11].dtn custodyTimeout 100
-scalar dtnsim.node[11].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[11].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -2864,7 +2865,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[11].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[11].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -2921,10 +2922,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[11].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2936,10 +2937,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[11].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -2984,27 +2985,27 @@ par dtnsim.node[12].app returnToSender false
 par dtnsim.node[12].app critical false
 par dtnsim.node[12].app custodyTransfer false
 par dtnsim.node[12].app externalTrafficEvents "\"\""
-scalar dtnsim.node[12].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[12].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[12].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[12].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[12].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[12].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[12].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3014,27 +3015,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[12].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[12].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[12].app appBundleReceivedHops:max nan
+scalar dtnsim.node[12].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[12].app appBundleReceivedHops:min nan
+scalar dtnsim.node[12].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[12].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3075,7 +3076,7 @@ par dtnsim.node[12].dtn gamma 0.999
 par dtnsim.node[12].dtn delta 0.01
 par dtnsim.node[12].dtn custodyReportByteSize 20
 par dtnsim.node[12].dtn custodyTimeout 100
-scalar dtnsim.node[12].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[12].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -3085,7 +3086,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[12].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[12].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -3142,10 +3143,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[12].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3157,10 +3158,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[12].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3205,27 +3206,27 @@ par dtnsim.node[13].app returnToSender true
 par dtnsim.node[13].app critical false
 par dtnsim.node[13].app custodyTransfer false
 par dtnsim.node[13].app externalTrafficEvents "\"\""
-scalar dtnsim.node[13].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[13].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[13].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[13].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[13].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[13].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[13].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3235,27 +3236,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[13].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[13].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[13].app appBundleReceivedHops:max nan
+scalar dtnsim.node[13].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[13].app appBundleReceivedHops:min nan
+scalar dtnsim.node[13].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[13].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3296,7 +3297,7 @@ par dtnsim.node[13].dtn gamma 0.999
 par dtnsim.node[13].dtn delta 0.01
 par dtnsim.node[13].dtn custodyReportByteSize 20
 par dtnsim.node[13].dtn custodyTimeout 100
-scalar dtnsim.node[13].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[13].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -3306,7 +3307,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[13].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[13].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -3363,10 +3364,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[13].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3378,10 +3379,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[13].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3426,27 +3427,27 @@ par dtnsim.node[14].app returnToSender true
 par dtnsim.node[14].app critical false
 par dtnsim.node[14].app custodyTransfer false
 par dtnsim.node[14].app externalTrafficEvents "\"\""
-scalar dtnsim.node[14].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[14].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[14].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[14].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[14].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[14].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[14].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3456,27 +3457,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[14].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[14].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[14].app appBundleReceivedHops:max nan
+scalar dtnsim.node[14].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[14].app appBundleReceivedHops:min nan
+scalar dtnsim.node[14].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[14].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3517,7 +3518,7 @@ par dtnsim.node[14].dtn gamma 0.999
 par dtnsim.node[14].dtn delta 0.01
 par dtnsim.node[14].dtn custodyReportByteSize 20
 par dtnsim.node[14].dtn custodyTimeout 100
-scalar dtnsim.node[14].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[14].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -3527,7 +3528,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[14].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[14].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -3584,10 +3585,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[14].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3599,10 +3600,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[14].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3647,27 +3648,27 @@ par dtnsim.node[15].app returnToSender true
 par dtnsim.node[15].app critical false
 par dtnsim.node[15].app custodyTransfer false
 par dtnsim.node[15].app externalTrafficEvents "\"\""
-scalar dtnsim.node[15].app appBundleReceivedDelay:mean nan
+scalar dtnsim.node[15].app appBundleReceivedDelay:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, mean"
-scalar dtnsim.node[15].app appBundleReceivedDelay:max nan
+scalar dtnsim.node[15].app appBundleReceivedDelay:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, max"
-scalar dtnsim.node[15].app appBundleReceivedDelay:min nan
+scalar dtnsim.node[15].app appBundleReceivedDelay:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedDelay
 attr title "appBundleReceivedDelay, min"
 statistic dtnsim.node[15].app appBundleReceivedDelay:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3677,27 +3678,27 @@ attr title appBundleReceivedDelay
 bin	-inf	0
 bin	0	0
 bin	1	0
-scalar dtnsim.node[15].app appBundleReceivedHops:mean nan
+scalar dtnsim.node[15].app appBundleReceivedHops:mean -nan
 attr interpolationmode none
 attr recordingmode mean
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, mean"
-scalar dtnsim.node[15].app appBundleReceivedHops:max nan
+scalar dtnsim.node[15].app appBundleReceivedHops:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, max"
-scalar dtnsim.node[15].app appBundleReceivedHops:min nan
+scalar dtnsim.node[15].app appBundleReceivedHops:min -nan
 attr interpolationmode none
 attr recordingmode min
 attr source appBundleReceivedHops
 attr title "appBundleReceivedHops, min"
 statistic dtnsim.node[15].app appBundleReceivedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3738,7 +3739,7 @@ par dtnsim.node[15].dtn gamma 0.999
 par dtnsim.node[15].dtn delta 0.01
 par dtnsim.node[15].dtn custodyReportByteSize 20
 par dtnsim.node[15].dtn custodyTimeout 100
-scalar dtnsim.node[15].dtn routeCgrRouteTableEntriesExplored:max nan
+scalar dtnsim.node[15].dtn routeCgrRouteTableEntriesExplored:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesExplored
@@ -3748,7 +3749,7 @@ attr interpolationmode none
 attr recordingmode sum
 attr source routeCgrRouteTableEntriesExplored
 attr title "routeCgrRouteTableEntriesExplored, sum"
-scalar dtnsim.node[15].dtn routeCgrRouteTableEntriesCreated:max nan
+scalar dtnsim.node[15].dtn routeCgrRouteTableEntriesCreated:max -nan
 attr interpolationmode none
 attr recordingmode max
 attr source routeCgrRouteTableEntriesCreated
@@ -3805,10 +3806,10 @@ attr source dtnBundleReceivedFromCom
 attr title "dtnBundleReceivedFromCom, count"
 statistic dtnsim.node[15].dtn dtnBundleSentToAppRevisitedHops:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none
@@ -3820,10 +3821,10 @@ bin	0	0
 bin	1	0
 statistic dtnsim.node[15].dtn dtnBundleSentToAppHopCount:histogram
 field count 0
-field mean nan
-field stddev nan
-field min nan
-field max nan
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
 field sum 0
 field sqrsum 0
 attr interpolationmode none

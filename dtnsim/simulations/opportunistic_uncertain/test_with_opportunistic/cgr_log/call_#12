@@ -19,6 +19,7 @@ Region          FromNode        ToNode          FromTime        ToTime          
 1               1               6               35              1000000         1000            1.00            0
 1               2               4               20              40              1000            1.00            0
 1               3               4               20              40              1000            1.00            0
+1               4               1               30              60              1000            0.05            0
 1               5               4               40              60              1000            1.00            0
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -30,6 +31,7 @@ FromNode        ToNode          FromTime        ToTime          OWLT
 1               6               35              1000000         0
 2               4               20              40              0
 3               4               20              40              0
+4               1               30              60              0
 5               4               40              60              0
 
 ----------------------------------------------------------------------
@@ -38,7 +40,7 @@ FromNode        ToNode          FromTime        ToTime          OWLT
 
 1) ComputedAtTime: 35
 Neighbor        FromTime        ToTime          ArrivalTime     OwltSum         Confidence      Children        Father          Hops            SP
-6               35              1000000         35              0               1.00            0               no              1               1.000000
+6               35              1000000         35              0               1.00            0               no              1               0.000000
 FromNode        ToNode          FromTime        ToTime          XmitRate        Confidence      MTV[Bulk]       MTV[Normal]     MTV[Expedited]
 1               6               35              1000000         1000            1.00            9.99965e+08     9.99965e+08     9.99965e+08
 
