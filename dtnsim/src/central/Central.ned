@@ -42,6 +42,7 @@ simple Central
 		@signal[totalRoutes];
 		@signal[availableRoutes];
 		@signal[pairsOfNodesWithAtLeastOneRoute];
+        
         @statistic[contactsNumber](title="contactsNumber"; source="contactsNumber"; record=sum; interpolationmode=none);
         @statistic[totalRoutes](title="totalRoutes"; source="totalRoutes"; record=sum; interpolationmode=none);
         @statistic[availableRoutes](title="availableRoutes"; source="availableRoutes"; record=sum; interpolationmode=none);

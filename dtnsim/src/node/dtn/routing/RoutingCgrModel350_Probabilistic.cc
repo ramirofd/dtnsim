@@ -105,7 +105,7 @@ void RoutingCgrModel350_Probabilistic::routeAndQueueBundle(BundlePkt * bundle, d
 		else{
 			BundlePkt * bundleCopy;
 
-			//Send bundle using best arrival time route iff the route success probability is greater or equal than 0.5
+			//Send bundle using best arrival time route if the route success probability is greater or equal than 0.5
 			if( pow(sContactProb_,selectedNeighborAT->hopCount) >= 0.5 )
 			{
 				bundle->setQos(0);

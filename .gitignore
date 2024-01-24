@@ -14,6 +14,7 @@ dtnsim/simulations/opportunistic/**/.vci
 dtnsim/simulations/opportunistic/**/.vec
 dtnsim/simulations/opportunistic/**/cgr_log/
 dtnsim/simulations/opportunistic_uncertain/**/cgr_log/
+dtnsim/simulations/iccAnalysis/**/resultsRandom/
 
 dtnsim/simulations/tutorial/**/results/
 

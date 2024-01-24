@@ -484,7 +484,7 @@ void Dtn::handleMessage(cMessage *msg)
 					bundle->getVisitedNodesForUpdate().push_back(eid_);
 					bundle->setXmitCopiesCount(0);
 
-					//cout<<"-----> sending bundle to node "<<bundle->getNextHopEid()<<endl;
+					//cout<<"-----> sending bundle to node "<bundle->getNextHopEid()<<endl;
 					send(bundle, "gateToCom$o");
 
 					if (saveBundleMap_)
