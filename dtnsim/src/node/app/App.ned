@@ -23,10 +23,10 @@ simple App
         @signal[appBundleReceivedHops];
         @signal[appBundleReceivedDelay];
         
-        @statistic[appBundleSent](title="appBundleSent"; source="appBundleSent"; record=count,vector; interpolationmode=none);
-        @statistic[appBundleReceived](title="appBundleReceived"; source="appBundleReceived"; record=count,vector; interpolationmode=none);
-        @statistic[appBundleReceivedHops](title="appBundleReceivedHops"; source="appBundleReceivedHops"; record=mean,max,min,histogram,vector; interpolationmode=none);
-        @statistic[appBundleReceivedDelay](title="appBundleReceivedDelay"; source="appBundleReceivedDelay"; record=mean,max,min,histogram,vector; interpolationmode=none);
+        @statistic[appBundleSent](title="appBundleSent"; source="appBundleSent"; record=count; interpolationmode=none);
+        @statistic[appBundleReceived](title="appBundleReceived"; source="appBundleReceived"; record=count; interpolationmode=none);
+        @statistic[appBundleReceivedHops](title="appBundleReceivedHops"; source="appBundleReceivedHops"; record=mean,max,min,histogram; interpolationmode=none);
+        @statistic[appBundleReceivedDelay](title="appBundleReceivedDelay"; source="appBundleReceivedDelay"; record=mean,max,min,histogram; interpolationmode=none);
                    
                       
     gates:

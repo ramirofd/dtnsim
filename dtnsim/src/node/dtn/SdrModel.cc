@@ -24,7 +24,7 @@ void SdrModel::setNodesNumber(int nodesNumber)
 	this->nodesNumber_ = nodesNumber;
 }
 
-void SdrModel::setSize(double size)
+void SdrModel::setSize(int size)
 {
 	this->size_ = size;
 }

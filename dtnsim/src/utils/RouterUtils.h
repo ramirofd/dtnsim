@@ -1,14 +1,14 @@
-#include "src/Config.h"
+//#include "Config.h"
 
 #ifdef USE_BOOST_LIBRARIES
 
 #ifndef ROUTERUTILS_H_
 #define ROUTERUTILS_H_
 
-#include "src/utils/TopologyUtils.h"
-#include "src/node/dtn/ContactPlan.h"
+#include "TopologyUtils.h"
+#include "ContactPlan.h"
 #include <boost/graph/adjacency_list.hpp>
-#include "src/utils/RouterGraphInfo.h"
+#include "RouterGraphInfo.h"
 #include <string>
 #include <fstream>
 

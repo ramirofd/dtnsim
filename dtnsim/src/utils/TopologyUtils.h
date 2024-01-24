@@ -1,13 +1,11 @@
-#include "src/Config.h"
-
 #ifdef USE_BOOST_LIBRARIES
 
 #ifndef TOPOLOGYUTILS_H_
 #define TOPOLOGYUTILS_H_
 
-#include "src/node/dtn/ContactPlan.h"
+#include "ContactPlan.h"
 #include <boost/graph/adjacency_list.hpp>
-#include "src/utils/TopologyGraphInfo.h"
+#include "utils/TopologyGraphInfo.h"
 #include <fstream>
 #include <sstream>
 #include <string>

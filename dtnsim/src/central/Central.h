@@ -41,7 +41,6 @@ public:
 	void finish();
 	virtual void initialize();
 	virtual void handleMessage(cMessage * msg);
-	int getNodesNumber();
 
 private:
 
@@ -59,8 +58,6 @@ private:
 	void saveLpFlows();
 
 	map<int, map<int, map<int, double > > > getTraffics();
-
-	vector<double> getNodesBuffersSizes();
 
 	double getState(double trafficStart);
 

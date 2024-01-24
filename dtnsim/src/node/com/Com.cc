@@ -45,7 +45,7 @@ void Com::handleMessage(cMessage *msg)
 			double linkDelay = contactTopology_.getRangeBySrcDst(eid_, bundle->getNextHopEid());
 			if (linkDelay == -1)
 			{
-				//cout << "warning, range not available for nodes " << eid_ << "-" << bundle->getNextHopEid() << ", assuming range is 0" << endl;
+				cout << "warning, range not available for nodes " << eid_ << "-" << bundle->getNextHopEid() << ", assuming range is 0" << endl;
 				linkDelay = 0;
 			}
 

@@ -1,4 +1,4 @@
-#include "src/Config.h"
+#include "../Config.h"
 
 #ifdef USE_CPLEX_LIBRARY
 #ifdef USE_BOOST_LIBRARIES
@@ -6,11 +6,11 @@
 #ifndef LPUTILS_H_
 #define LPUTILS_H_
 
-#include "src/node/dtn/ContactPlan.h"
+#include "ContactPlan.h"
 #include <boost/graph/adjacency_list.hpp>
-#include "src/utils/TopologyGraphInfo.h"
-#include "src/utils/RouterGraphInfo.h"
-#include "src/utils/Lp.h"
+#include "utils/TopologyGraphInfo.h"
+#include "utils/RouterGraphInfo.h"
+#include "Lp.h"
 #include <fstream>
 #include <sstream>
 #include <string>
