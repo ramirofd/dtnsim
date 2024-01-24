@@ -20,6 +20,7 @@
 #include <src/node/dtn/routing/brufncopies/RoutingBRUFNCopies.h>
 #include <src/node/dtn/routing/cgrbrufpowered/CGRBRUFPowered.h>
 #include <src/node/dtn/SdrModel.h>
+#include <src/central/Central.h>
 #include <cstdio>
 #include <string>
 #include <omnetpp.h>
@@ -87,7 +88,7 @@ public:
 	void addCurrentNeighbor(int neighborEid);
 	void removeCurrentNeighbor(int neighborEid);
 	int checkExistenceOfContact(int sourceEid, int destinationEid, int start);
-
+	double getSdrSize() const;
 
 protected:
 	virtual void initialize(int stage);
@@ -130,6 +131,8 @@ private:
 	double custodyTimeout_;
 
 	SdrModel sdr_;
+
+	double sdrSize_;
 
 	// BundlesMap
 	bool saveBundleMap_;

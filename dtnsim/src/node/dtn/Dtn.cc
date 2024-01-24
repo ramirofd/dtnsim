@@ -48,6 +48,8 @@ void Dtn::initialize(int stage)
 		// Store this node eid
 		this->eid_ = this->getParentModule()->getIndex();
 
+		this->sdrSize_ = par("sdrSize");
+
 		this->custodyTimeout_ = par("custodyTimeout");
 		this->custodyModel_.setEid(eid_);
 		this->custodyModel_.setSdr(&sdr_);
@@ -652,9 +654,11 @@ void Dtn::refreshForwarding()
 	{
 		ForwardingMsgStart *forwardingMsg = it->second;
 		int cid = forwardingMsg->getContactId();
+
 		if (!sdr_.isBundleForContact(cid))
 			//notify routing protocol that it has messages to send and contacts for routing
 			routing->refreshForwarding(contactTopology_.getContactById(cid));
+
 		if (!forwardingMsg->isScheduled())
 		{
 			scheduleAt(simTime(), forwardingMsg);
@@ -669,17 +673,14 @@ void Dtn::setOnFault(bool onFault)
 	// Local and remote forwarding recovery
 	if (onFault == false)
 	{
-		// Wake-up local un-scheduled forwarding threads
-		this->refreshForwarding();
-
-		// Wake-up remote un-scheduled forwarding threads
-		std::map<int, ForwardingMsgStart*>::iterator it;
-		for (it = forwardingMsgs_.begin(); it != forwardingMsgs_.end(); ++it)
+		// Wake-up local un-scheduled forwarding threads from ALL dtn modules.
+		int nodesNumber = check_and_cast<dtnsim::Central *>(this->getParentModule()->getParentModule()->getSubmodule("central"))->getNodesNumber();
+		for (int i = 1; i <= nodesNumber; i++)
 		{
-			ForwardingMsgStart *forwardingMsg = it->second;
-			Dtn *remoteDtn = (Dtn*) this->getParentModule()->getParentModule()->getSubmodule("node", forwardingMsg->getNeighborEid())->getSubmodule("dtn");
-			remoteDtn->refreshForwarding();
+			Dtn *dtn = check_and_cast<Dtn *>(this->getParentModule()->getParentModule()->getSubmodule("node", i)->getSubmodule("dtn"));
+			dtn->refreshForwarding();
 		}
+
 	}
 }
 
@@ -1183,3 +1184,7 @@ int Dtn::checkExistenceOfContact(int sourceEid, int destinationEid, int start)
 	}
 }
 
+double Dtn::getSdrSize() const
+{
+	return sdrSize_;
+}
