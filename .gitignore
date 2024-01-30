@@ -5,3 +5,7 @@
 # Ignore binaries
 dtnsim/out/
 dtnsim/dtnsim
+/.metadata/
+
+dtnsim/simulations/HAPS_Analysis/**/results
+dtnsim/simulations/HAPS_Analysis/**/Makefile.*

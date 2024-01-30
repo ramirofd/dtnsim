@@ -8,18 +8,18 @@ from mpl_toolkits.axes_grid1.inset_locator import mark_inset
 from matplotlib.ticker import FixedFormatter, FixedLocator
 import json
 
-with open('results_TTR=20.json', 'r') as json_file:
+with open('results_paper/results_TTR=20.json', 'r') as json_file:
     data = json.load(json_file)
 
-l0 = '1LEO-1GS'
-l1 = '1LEO-2GS'
-l2 = '1LEO-5GS'
-l3 = '1LEO-10GS'
-l4 = '1LEO-1HAGS-1GS'
-l5 = '1LEO-2HAGS-2GS'
-l6 = '1LEO-3HAGS-3GS'
-l7 = '1LEO-4HAGS-4GS'
-l8 = '1LEO-5HAGS-5GS'
+l0 = '2LEO-1GS'
+l1 = '2LEO-2GS'
+l2 = '2LEO-5GS'
+l3 = '2LEO-10GS'
+l4 = '2LEO-1HAGS-1GS'
+l5 = '2LEO-2HAGS-2GS'
+l6 = '2LEO-3HAGS-3GS'
+l7 = '2LEO-4HAGS-4GS'
+l8 = '2LEO-5HAGS-5GS'
 
 ttf_values = data['ttf_values']
 results1 = []

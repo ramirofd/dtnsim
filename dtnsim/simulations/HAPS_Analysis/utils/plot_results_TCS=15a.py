@@ -21,7 +21,6 @@ def get_delivery_ratio(INPUT_PATH, scenarios, xs, repetitions, TTR):
         for x in xs:
             for rep in repetitions:
                 input_path = INPUT_PATH + scenario + "General-TTF=%sh,TTR=%sh-#%d.sca" % (str(x), str(TTR), rep)
-                print(input_path)
 
                 xss.append(x)
 
@@ -55,7 +54,6 @@ def get_delivery_delay(INPUT_PATH, scenarios, xs, repetitions, TTR):
         for x in xs:
             for rep in repetitions:
                 input_path = INPUT_PATH + scenario + "General-TTF=%sh,TTR=%sh-#%d.sca" % (str(x), str(TTR), rep)
-                print(input_path)
 
                 xss.append(x)
 
@@ -85,7 +83,6 @@ def get_buffer_occupancy(INPUT_PATH, scenarios, xs, repetitions, node):
         for x in xs:
             for rep in repetitions:
                 input_path = INPUT_PATH + scenario + "General-TTF=%sh-#%d.sca" % (str(x), rep)
-                print(input_path)
 
                 xss.append(x)
 
@@ -115,29 +112,29 @@ def get_buffer_occupancy(INPUT_PATH, scenarios, xs, repetitions, node):
         results[scenario] = (xss, values_avg, values_max)
     return results
 
-INPUT_PATH = os.getcwd() + "/"
+INPUT_PATH = "dtnsim/simulations/HAPS_Analysis"
 
 scenarios = [
-'../1LEO_1GS/results/',
-'../1LEO_2GS/results/',
-'../1LEO_5GS/results/',
-'../1LEO_10GS/results/',
-'../1LEO_1HAP_1GS/results/',
-'../1LEO_2HAP_2GS/results/',
-'../1LEO_3HAP_3GS/results/',
-'../1LEO_4HAP_4GS/results/',
-'../1LEO_5HAP_5GS/results/',
+'/2LEO_1GS/results/',
+'/2LEO_2GS/results/',
+'/2LEO_5GS/results/',
+'/2LEO_10GS/results/',
+'/2LEO_1HAP_1GS/results/',
+'/2LEO_2HAP_2GS/results/',
+'/2LEO_3HAP_3GS/results/',
+'/2LEO_4HAP_4GS/results/',
+'/2LEO_5HAP_5GS/results/',
 ]
 
-l0 = '1LEO-1GS'
-l1 = '1LEO-2GS'
-l2 = '1LEO-5GS'
-l3 = '1LEO-10GS'
-l4 = '1LEO-1HAGS-1GS'
-l5 = '1LEO-2HAGS-2GS'
-l6 = '1LEO-3HAGS-3GS'
-l7 = '1LEO-4HAGS-4GS'
-l8 = '1LEO-5HAGS-5GS'
+l0 = '2LEO-1GS'
+l1 = '2LEO-2GS'
+l2 = '2LEO-5GS'
+l3 = '2LEO-10GS'
+l4 = '2LEO-1HAGS-1GS'
+l5 = '2LEO-2HAGS-2GS'
+l6 = '2LEO-3HAGS-3GS'
+l7 = '2LEO-4HAGS-4GS'
+l8 = '2LEO-5HAGS-5GS'
 
 m0 = "s"
 m1 = "o"
@@ -162,7 +159,7 @@ TTR = 15
 repetitions = list(range(0,100))
 results1 = get_delivery_ratio(INPUT_PATH, scenarios, TTF, repetitions, TTR)
 results2 = get_delivery_delay(INPUT_PATH, scenarios, TTF, repetitions, TTR)
-#results3 = get_buffer_occupancy(INPUT_PATH, ['../1LEO_1HAP_1GS/results/'], TTF, repetitions, "11")
+#results3 = get_buffer_occupancy(INPUT_PATH, ['../2LEO_1HAP_1GS/results/'], TTF, repetitions, "11")
 
 WIDTH = 10
 HEIGHT = 8
@@ -265,30 +262,30 @@ plt.clf()
 data = {
     "ttf_values": results1[scenarios[0]][0],
     "delivery_ratio": {
-    '1LEO-1GS': results1[scenarios[0]][1],
-    '1LEO-2GS': results1[scenarios[1]][1],
-    '1LEO-5GS': results1[scenarios[2]][1],
-    '1LEO-10GS': results1[scenarios[3]][1],
-    '1LEO-1HAGS-1GS': results1[scenarios[4]][1],
-    '1LEO-2HAGS-2GS': results1[scenarios[5]][1],
-    '1LEO-3HAGS-3GS': results1[scenarios[6]][1],
-    '1LEO-4HAGS-4GS': results1[scenarios[7]][1],
-    '1LEO-5HAGS-5GS': results1[scenarios[8]][1],
+    '2LEO-1GS': results1[scenarios[0]][1],
+    '2LEO-2GS': results1[scenarios[1]][1],
+    '2LEO-5GS': results1[scenarios[2]][1],
+    '2LEO-10GS': results1[scenarios[3]][1],
+    '2LEO-1HAGS-1GS': results1[scenarios[4]][1],
+    '2LEO-2HAGS-2GS': results1[scenarios[5]][1],
+    '2LEO-3HAGS-3GS': results1[scenarios[6]][1],
+    '2LEO-4HAGS-4GS': results1[scenarios[7]][1],
+    '2LEO-5HAGS-5GS': results1[scenarios[8]][1],
     },
     "delivery_delay": {
-        '1LEO-1GS': results2[scenarios[0]][1],
-        '1LEO-2GS': results2[scenarios[1]][1],
-        '1LEO-5GS': results2[scenarios[2]][1],
-        '1LEO-10GS': results2[scenarios[3]][1],
-        '1LEO-1HAGS-1GS': results2[scenarios[4]][1],
-        '1LEO-2HAGS-2GS': results2[scenarios[5]][1],
-        '1LEO-3HAGS-3GS': results2[scenarios[6]][1],
-        '1LEO-4HAGS-4GS': results2[scenarios[7]][1],
-        '1LEO-5HAGS-5GS': results2[scenarios[8]][1],
+        '2LEO-1GS': results2[scenarios[0]][1],
+        '2LEO-2GS': results2[scenarios[1]][1],
+        '2LEO-5GS': results2[scenarios[2]][1],
+        '2LEO-10GS': results2[scenarios[3]][1],
+        '2LEO-1HAGS-1GS': results2[scenarios[4]][1],
+        '2LEO-2HAGS-2GS': results2[scenarios[5]][1],
+        '2LEO-3HAGS-3GS': results2[scenarios[6]][1],
+        '2LEO-4HAGS-4GS': results2[scenarios[7]][1],
+        '2LEO-5HAGS-5GS': results2[scenarios[8]][1],
     }
 }
 
-with open('results_TTR=15.json', 'w') as json_file:
+with open('results_paper/results_TTR=15.json', 'w') as json_file:
     json.dump(data, json_file)
 
 print("end")
