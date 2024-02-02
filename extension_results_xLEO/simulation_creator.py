@@ -84,9 +84,9 @@ with open('extension_results_xLEO/contactPlan/contact_plan_7d_name_to_id_mapping
         name_to_id[id] = name
 
 # To choose how many of each do you want to compute
-number_of_LEOS_wanted = [2, 5, 10, 60]
-number_of_GS_wanted = [1,2,5,10]
-number_of_HAGS_GS_wanted = [1,2,3,4,5]
+number_of_LEOS_wanted =[66]
+number_of_GS_wanted = [1,5,10,21]
+number_of_HAGS_GS_wanted = [1,5,10,21]
 
 
 # Find the first key that have a value that began with 'LEO'
@@ -118,7 +118,6 @@ for number_of_LEOS in number_of_LEOS_wanted:
 # Create folders for the simulation with the filtered contact plans
 
 FOLDERS_NAME = []
-# Create the omnetpp file
 for number_of_LEOS in number_of_LEOS_wanted:
     for number_of_GS in number_of_GS_wanted:
         FOLDERS_NAME.append('%sLEO_%sGS' % (number_of_LEOS, number_of_GS))
@@ -198,15 +197,21 @@ for output_file_name in FOLDERS_NAME:
 
 
 # Create the run.sh file
-with open('dtnsim/simulations/HAPS_Analysis/run.sh', 'w') as file:
-    file.write("#!/bin/bash\n")
-    file.write("\n")
+i = 0
+nbFiles = len(number_of_GS_wanted) + len(number_of_HAGS_GS_wanted)
+for output_file_name in FOLDERS_NAME:
+    if i % nbFiles == 0:
+        with open('dtnsim/simulations/HAPS_Analysis/run%sLEOS.sh' % number_of_LEOS_wanted[i//nbFiles], 'w') as file:
+            file.write("#!/bin/bash\n\n")
 
-    for output_file_name in FOLDERS_NAME:
+    with open('dtnsim/simulations/HAPS_Analysis/run%sLEOS.sh' % number_of_LEOS_wanted[i//nbFiles], 'a') as file:
         file.write("cd %s\n" % output_file_name)
         file.write("chmod +x script.sh\n") 
         file.write("./script.sh &\n")
-        file.write("cd ..\n")
-        file.write("\n")
+        file.write("cd ..\n\n")
 
-    file.write("wait\n")
+    if i+1 % nbFiles == 0:
+        with open('dtnsim/simulations/HAPS_Analysis/run%sLEOS.sh' % number_of_LEOS_wanted[i//nbFiles], 'a') as file:
+            file.write("\nwait\n")
+            
+    i += 1

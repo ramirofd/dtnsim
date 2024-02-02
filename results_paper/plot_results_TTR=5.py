@@ -95,9 +95,9 @@ ax.set_xlabel("TCC [hours]", fontsize=13)
 ax.set_ylabel("Delivery ratio [% of files generated]", fontsize=13)
 plt.tight_layout()
 
-ax.annotate('Mean values with 95% confidence interval', xy=(1.5, 70), xytext=(10, 70),
-            arrowprops=dict(facecolor='black', arrowstyle='->', alpha=0.5),
-            bbox=dict(boxstyle='round,pad=0.5', fc='white', ec='gray', lw=1), ha='center', va='center')
+# ax.annotate('Mean values with 95% confidence interval', xy=(1.5, 70), xytext=(10, 70),
+#             arrowprops=dict(facecolor='black', arrowstyle='->', alpha=0.5),
+#             bbox=dict(boxstyle='round,pad=0.5', fc='white', ec='gray', lw=1), ha='center', va='center')
 
 
 plt.grid(linewidth=LINEWIDTH, zorder=0)
